@@ -1,20 +1,20 @@
 
 header {
     display: flex;
-    width: 80%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0 1%;
     background: radial-gradient(circle, #ec7edf 0%, #e9c4ef 100%);
 }
-
 .logo img{
     width: 60px;
     padding: 10px;
 }
 .navbar{
-    width: 85%;
+    width: 100%;
     color: #eee;
     display: flex;
     justify-content: right;
+    z-index: 2;
 }
 .navbar ul{
     padding: 0;

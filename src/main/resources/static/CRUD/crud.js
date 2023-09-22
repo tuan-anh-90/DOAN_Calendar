@@ -185,3 +185,8 @@ function fetchUsers() {
 
 // Gọi hàm fetchUsers để hiển thị dữ liệu người dùng khi trang được tải
 fetchUsers();
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Your CRUD-related code goes here
+    console.log('CRUD.js loaded and executed.');
+  });
