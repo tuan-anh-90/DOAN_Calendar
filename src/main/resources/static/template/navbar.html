@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/main/resources/static/css/navbar.css">
+    <title>1235 RƠI NHỊP SỐ 4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/src/main/resources/static/image/logo.jpg" alt="">
+        </div>
+        <div class="navbar">
+            <input type="checkbox" name="openNav" id="openNav">
+            <label for="openNav" class="openNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="menu">
+                <li id="homeLink"><i class="fa-solid fa-house"></i> Home</li>
+                <li><i class="fa-regular fa-address-card"></i> Contact
+                    <label>
+                        <input type="checkbox">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </label>
+                    <ul>
+                        <li><i class="fa-solid fa-users"></i> Update</li>
+                        <li><i class="fa-solid fa-users"></i> Delete</li>
+                        <li><i class="fa-solid fa-users"></i> Create</li>
+                    </ul>
+                </li>
+                <li id="CRUDLink"><i class="fa-regular fa-address-card"></i> CRUD</li>
+                <li><i class="fa-regular fa-address-card"></i> Black</li>
+            </ul>
+            <ul class="otherOption">
+                <li><i class="fa-solid fa-right-to-bracket"></i> Log In</li>
+                <li><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign In</li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="calendarForm" style="display: none;">
+    
+        <div class="main">
+            <div class="wrap">
+                <div class="left">
+                    <div id="nav"></div>
+                </div>
+                <div class="right">
+                    <div class="toolbar">
+                        <button id="previous">Previous</button>
+                        <button id="next">Next</button>
+                    </div>
+                    <div id="dp"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/src/main/resources/static/js/daypilot/daypilot-all.min.js"></script>
+        <!-- <script src="app.js"></script> -->
+        
+    </div>
+
+    <div id="contentContainer">
+        <!-- Nội dung sẽ thay đổi ở đây -->
+    </div>
+    <script src="/src/main/resources/static/js/daypilot/navbar.js"></script>
+</body>
+</html>
