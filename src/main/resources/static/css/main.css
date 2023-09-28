@@ -1,8 +1,18 @@
-p, body, td, input, select, button {
+.Name{
+    padding-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+p, .boxHome, td, input, select, button {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 14px;
 }
-
+button{
+    margin-bottom: 20px;
+}
 body {
     padding: 0px;
     margin: 0px;

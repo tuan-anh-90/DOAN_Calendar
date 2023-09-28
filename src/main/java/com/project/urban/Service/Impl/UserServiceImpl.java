@@ -13,6 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.project.urban.DTO.LoginDTO;
 import com.project.urban.DTO.UserDTO;
+import com.project.urban.DTO.UserEditDTO;
 import com.project.urban.Entity.User;
 import com.project.urban.Exception.Constant;
 import com.project.urban.Exception.ErrorConstant;
@@ -75,20 +76,16 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public UserDTO updateUser(UserDTO userDTO) {
-		// Lấy đối tượng User từ cơ sở dữ liệu
-		User existingUser = userRepository.findById(userDTO.getId())
+	public UserEditDTO updateUser(UserEditDTO userEditDTO) {
+		User existingUser = userRepository.findById(userEditDTO.getId())
 				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
 
-		// Ánh xạ các trường của đối tượng UserDTO vào đối tượng User
 		ModelMapper modelMapper = new ModelMapper();
-		modelMapper.map(userDTO, existingUser);
+		modelMapper.map(userEditDTO, existingUser);
 
-		// Lưu đối tượng User đã cập nhật vào cơ sở dữ liệu
 		User updatedUser = userRepository.save(existingUser);
 
-		// Ánh xạ đối tượng User đã cập nhật thành đối tượng UserDTO và trả về
-		UserDTO updatedUserDTO = modelMapper.map(updatedUser, UserDTO.class);
+		UserEditDTO updatedUserDTO = modelMapper.map(updatedUser, UserEditDTO.class);
 		return updatedUserDTO;
 	}
 
