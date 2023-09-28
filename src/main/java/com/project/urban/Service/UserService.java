@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.project.urban.DTO.LoginDTO;
+import com.project.urban.DTO.UserEditDTO;
 import com.project.urban.DTO.UserDTO;
 import com.project.urban.DTO.UserEditDTO;
 import com.project.urban.Exception.ResourceNotFoundException;

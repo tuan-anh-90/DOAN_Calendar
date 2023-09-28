@@ -1,6 +1,7 @@
 package com.project.urban.Controller;
 
 import com.project.urban.DTO.LoginDTO;
+import com.project.urban.DTO.UserEditDTO;
 import com.project.urban.DTO.UserDTO;
 import com.project.urban.DTO.UserEditDTO;
 import com.project.urban.Exception.ResourceNotFoundException;
@@ -55,6 +56,7 @@ public class UserController {
 //	}
 	
 	@PutMapping("/{id}")
+<<<<<<< HEAD
 	public ResponseEntity<UserEditDTO> updateUser(@PathVariable("id") Long userId, @RequestBody UserEditDTO userDTO) {
 	    try {
 	        userDTO.setId(userId);
@@ -63,6 +65,12 @@ public class UserController {
 	    } catch (Exception e) {
 	        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 	    }
+=======
+	public ResponseEntity<UserEditDTO> updateUser(@PathVariable("id") Long userId, @RequestBody UserEditDTO userEditDTO) {
+		userEditDTO.setId(userId);
+		UserEditDTO updatedUserDTO = userService.updateUser(userEditDTO);
+		return new ResponseEntity<>(updatedUserDTO, HttpStatus.OK);
+>>>>>>> 7d41edb3b6c251937327eb91605d1ea9695d10a2
 	}
 
 	// Build Delete User REST API
